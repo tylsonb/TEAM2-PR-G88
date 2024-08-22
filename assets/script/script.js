@@ -40,27 +40,3 @@ document.addEventListener("DOMContentLoaded", function(event){
         tabla.appendChild(fila);
 // limpia los campps ingresados por el usuario
         formulario.reset();
-
-
-
-
-
-
-        
-
-
-
-
-        
-
-
-
-
-        /* console.log(name)
-        console.log(album)
-        console.log(artista) */
-        
-
-
-    })
-})

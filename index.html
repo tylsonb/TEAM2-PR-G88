@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=   , initial-scale=1.0" />
@@ -10,6 +10,7 @@
          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
          crossorigin="anonymous"
       />
+      <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
       <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -48,54 +49,171 @@
             </div>
          </div>
       </nav>
-      <table class="table mt-5">
 
-        <thead>
-          <tr class="table-primary">
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>TILSO</td>
-            <td>BELLO</td>
-            <td>@tylsonb</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-               <td>LEONARDO</td>
-               <td>LOBO</td>
-               <td>@leo025</td>
-            </tr>
-          <tr>
-          <th scope="row">3</th>
-            <td>FELIPE</td>
-            <td>ESPINOZA</td>
-            <td>@felespb</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-              <td>VICTOR</td>
-              <td>CAMPOS</td>
-              <td>@VICTOR</td>
-            </tr>
-            <tr>
-               <th scope="row">3</th>
-                 <td>ROBERTO</td>
-                 <td>ESCOBAR</td>
-                 <td>@ROBERTO</td>
-               </tr>
-        </tbody>
-      </table>
+      <section class="bg-light py-5">
+        <div class="container">
+          <h3 class="text-center mb-4">Lista de canciones más escuchadas</h3>
+          <ul class="nav nav-tabs mb-4" id="hitsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="mes-tab" data-bs-toggle="tab" data-bs-target="#mes" type="button" role="tab" aria-controls="mes" aria-selected="true">Hits del mes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="anio-tab" data-bs-toggle="tab" data-bs-target="#anio" type="button" role="tab" aria-controls="anio" aria-selected="false">Lo mejor del año</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="historia-tab" data-bs-toggle="tab" data-bs-target="#historia" type="button" role="tab" aria-controls="historia" aria-selected="false">Más escuchas en la historia</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="hitsTabContent">
+            <!-- Tab para hits del mes -->
+            <div class="tab-pane fade show active" id="mes" role="tabpanel" aria-labelledby="mes-tab">
+              <div class="table-responsive">
+                <table class="table table-striped sortable">
+                  <thead>
+                    <tr>
+                      <th scope="col" data-sort="name">Canción</th>
+                      <th scope="col" data-sort="album">Álbum</th>
+                      <th scope="col" data-sort="year">Año</th>
+                      <th scope="col" data-sort="genre">Género</th>
+                      <th scope="col" data-sort="sales">Discos Vendidos</th>
+                      <th scope="col" data-sort="plays">Reproducciones en Last.fm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Flowers</td>
+                      <td>Endless Summer Vacation</td>
+                      <td>2023</td>
+                      <td>Pop</td>
+                      <td>5,000,000</td>
+                      <td>115,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>As It Was</td>
+                      <td>Harry's House</td>
+                      <td>2022</td>
+                      <td>Pop</td>
+                      <td>8,000,000</td>
+                      <td>160,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>Blinding Lights</td>
+                      <td>After Hours</td>
+                      <td>2020</td>
+                      <td>R&B</td>
+                      <td>10,000,000</td>
+                      <td>220,000,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Tab para lo mejor del año -->
+            <div class="tab-pane fade" id="anio" role="tabpanel" aria-labelledby="anio-tab">
+              <div class="table-responsive">
+                <table class="table table-striped sortable">
+                  <thead>
+                    <tr>
+                      <th scope="col" data-sort="name">Canción</th>
+                      <th scope="col" data-sort="album">Álbum</th>
+                      <th scope="col" data-sort="year">Año</th>
+                      <th scope="col" data-sort="genre">Género</th>
+                      <th scope="col" data-sort="sales">Discos Vendidos</th>
+                      <th scope="col" data-sort="plays">Reproducciones en Last.fm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Heat Waves</td>
+                      <td>Dreamland</td>
+                      <td>2021</td>
+                      <td>Indie</td>
+                      <td>6,000,000</td>
+                      <td>200,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>Levitating</td>
+                      <td>Future Nostalgia</td>
+                      <td>2020</td>
+                      <td>Pop</td>
+                      <td>7,500,000</td>
+                      <td>210,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>Shallow</td>
+                      <td>A Star Is Born</td>
+                      <td>2018</td>
+                      <td>Pop/Rock</td>
+                      <td>12,000,000</td>
+                      <td>180,000,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Tab para más escuchas en la historia -->
+            <div class="tab-pane fade" id="historia" role="tabpanel" aria-labelledby="historia-tab">
+              <div class="table-responsive">
+                <table class="table table-striped sortable">
+                  <thead>
+                    <tr>
+                      <th scope="col" data-sort="name">Canción</th>
+                      <th scope="col" data-sort="album">Álbum</th>
+                      <th scope="col" data-sort="year">Año</th>
+                      <th scope="col" data-sort="genre">Género</th>
+                      <th scope="col" data-sort="sales">Discos Vendidos</th>
+                      <th scope="col" data-sort="plays">Reproducciones en Last.fm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bohemian Rhapsody</td>
+                      <td>A Night at the Opera</td>
+                      <td>1975</td>
+                      <td>Rock</td>
+                      <td>15,000,000</td>
+                      <td>450,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>Billie Jean</td>
+                      <td>Thriller</td>
+                      <td>1982</td>
+                      <td>Pop</td>
+                      <td>30,000,000</td>
+                      <td>370,000,000</td>
+                    </tr>
+                    <tr>
+                      <td>Smells Like Teen Spirit</td>
+                      <td>Nevermind</td>
+                      <td>1991</td>
+                      <td>Grunge</td>
+                      <td>16,000,000</td>
+                      <td>320,000,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+          <p>&copy; 2024 Música por género. Todos los derechos reservados.</p>
+          <div>
+            <a href="#" class="text-white mx-2">Política de Privacidad</a>
+            <a href="#" class="text-white mx-2">Términos de Uso</a>
+            <a href="pages/quienessomos.html" class="text-white mx-2">Quiénes somos</a>
+            <a href="#" class="text-white mx-2">Contacto</a>
+          </div>
+        </div>
 
       <script
          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
          crossorigin="anonymous"
       ></script>
+      
    </body>
 </html>
